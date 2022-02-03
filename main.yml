@@ -1,13 +1,10 @@
-  #AndriyCraft
-
-  --- 
+#  --- 
   acidBottle: "Кислотна пляшка"
   acidBucket: "Відро з кислотою"
   acidLore: |
       Do
       not drink!
       Beware!
-
   adminDeleteIsland: 
     error: "Use &ldeleteisland confirm &r&cto delete the island you are on."
     noid: "Cannot identify island."
@@ -276,7 +273,7 @@
     blockWorthless: "[name] is worthless" 
     cannotTeleport: "Ви не можете телепортуватися коли падаєте!"
     donate: "Вітаємо на SkyBlock від tastybento"
-    donatecolor: "аква"
+    donatecolor: "aqua"
     errorCouldNotCreateIsland: "Невдалося створити острів. Повідомте про цью проблему на: https://andriycraft.page"
     errorInvalidPlayer: "Цього гравця не існує або він не має остріва"
     errorLevelNotReady: "Спробуйте через пару секунд"
@@ -312,7 +309,7 @@
     islandLevelis: "Ваш рівень остріва : [level]"
     new: "Створюєм вам острів..."
     requiredPointsToNextLevel: "You need [points] more points to reach level [next]!"
-    resetConfirm: "Протишіть /[label] confirm щоб підтвердити видалення острів"
+    resetConfirm: "Протишіть /[label] confirm щоб підтвердити видалення вашого острова (Викоритовуйте /is go щоб телепортуватися на ваш острів)"
     resetMustRemovePlayers: "Спочатку вам треба видалити всіх учасників остріва (/[label] kick <player>)"
     resetNoMore: "Ви більше не можете перестворювати острів!"
     resetOnlyOwner: "Ви не власник цього остріва!"
@@ -322,10 +319,10 @@
     resetWait: "Вам треба зачекати ще [time] секунд."
     resetYouHave: "Ви маєте ще [number] можливостей перстворити ваш острів"
     subtitle: "Автор: tastybento"
-    subtitlecolor: "синій"
+    subtitlecolor: "blue"
     teleport: "Телепортація на ваш острів"
     title: "Скайблок"
-    titlecolor: "золотий"
+    titlecolor: "gold"
     unlimited: "Безлімітний"
     url: ""
   islandProtected: "Island protected."
