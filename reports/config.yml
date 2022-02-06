@@ -1,10 +1,10 @@
 messages:
     Prefix: '&8(&b!&8) &3&l»'
-    Header: '  &f&m+----&3&m----&f&m----&3&m----&f&m----&3&m----&f&m----&3&m----&f&m----&3&m----+'
-    Footer: '  &f&m+----&3&m----&f&m----&3&m----&f&m----&3&m----&f&m----&3&m----&f&m----&3&m----+'
+    Header: ''
+    Footer: ''
     Note: '%prefix% &fTo clear all the reports, type &e/reports clear&f.'
     Reports-Cleared: '%prefix% &fAll reports have been &asuccessfully &fcleared.'
-    Args-Error: '%prefix% &fSorry, but that sub-command doesn''t exist.'
+    Args-Error: '&cНевідома команда.'
     No-Permission: '%prefix% &fSorry, but you don''t have permission to do that.'
     Reloaded: '%prefix% &fYou''ve &asuccessfully &freloaded the configuration.'
     Reported-Format: '%prefix% &c%player% &fwas reported by &a%reporter% &ffor &a%reason%&f.'
