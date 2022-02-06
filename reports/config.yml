@@ -86,8 +86,7 @@ settings:
     Give-Reporter-Rewards-On-Report-Complete:
         Enabled: true
         Reporter-Is-Online:
-        - 'give %reporter% paper 1 name:&fHey,_thanks! lore:&fA_report_you_made_was_successfully_taken_care_of.|&fWe''d_like_to_thank_you_for_being_a_loyal_player!'
-        - 'give %reporter% diamond_block 1 name:&c❤'
+        - 'eco give %reporter% 250'
         Reporter-Is-Offline:
         - 'mail send %reporter% A report you made was successfully taken care of. We''d like to thank you for being a loyal player! Check your Report Claims! /reports claim'
         # Offline players can receive items by setting up /reports setupclaimgui
