@@ -11,14 +11,14 @@ messages:
     Report-Submitted: '%prefix% &a%player% &fhas submitted a report. &8(&e/reports&8)'
     Click-To-Info: '&7(Click to open the Reports GUI)'
     Reports-Empty: '%prefix% &fSorry, but no reports have been submitted.'
-    Specify-Reason: '&cВкажіть пичину вашої скарги.'
+    Specify-Reason: '&cВкажіть причину вашої скарги.'
     Confirm: '&fPlease type &e/reports clear &fagain to confirm.'
     Cant-Report-Yourself: '&cВи не можете поскаржитися на самого себе.'
-    Cant-Report-That-Player: 'Ви не можете поскаржитися на цього гравця.'
+    Cant-Report-That-Player: '&cВи не можете поскаржитися на цього гравця.'
     Max-Reports-Reached: '&cЗабагато скарг'
     Nothing-To-Clear: ''
-    Please-Wait: '&сВи маєте зачикати &c%cooldown%s&f.'
-    Report-Usage: '&e/report [нікнейм] [причина]'
+    Please-Wait: '&сВи маєте зачикати ще %cooldown% секунд.'
+    Report-Usage: '&c/report [нік-нейм] [причина]'
     Teleport-Message: 'Ви телепортувалися до %player%.'
     Player-Has-To-Be-Online: '&cВи не можете поскаржитися на %player% томущо нік зараз не онлайн'
     Claim-GUI-Not-Set-Up: '%prefix% &fSorry, but that player wasn''t rewarded as they''re offline and you haven''t set up the Reports ClaimGUI. &8(&e/reports setupclaimgui)'
@@ -36,8 +36,8 @@ messages:
     Your-Report-Was-Denied: '&cОдна з ваших скарг була відхилина.'
     Link-Format: '%prefix% &e%link%'
     Provide-Image-Proof:
-    - '%prefix% &fPlease provide a link to an image of proof for your report in chat.'
-    - '%prefix% &fYou can type ''cancel'' to cancel your report.'
+    - '&fPlease provide a link to an image of proof for your report in chat.'
+    - '&fYou can type ''cancel'' to cancel your report.'
     Player-Reported:
     - ''
     - '  &fВи успішно подали скаргу на &c%player%&f.'
@@ -53,7 +53,7 @@ settings:
     Tell-Players-They-Have-Rewards-In-Their-ClaimGUI: true
     Perform-Commands-On-Report: false
     Commands-Upon-Reports:
-    - 'adminchat %reporter% поскаржився на %reported% за:  %reason%'
+    - 'adminchat %reporter% поскаржився на %reported% за: %reason%'
     Use-Header-&-Footer: true
     Require-Image-Proof-Link-Before-Report-Creation: false
     Tell-Reporter-Their-Report-Was-Denied: true
