@@ -1,10 +1,10 @@
-timer: 150
+timer: 170
 Random: true
 UseTellRawMessages: false
 Messages:
 - '&7[&6!&7] Ви зараз граєте на: play.andriycraft.page'
 - '&7[&6!&7] Наш сайт: andriycraft.page'
 - '&7[&6!&7] Наш форум: https://andriycraft.page/forum/'
-- '&7[&6!&7] Якщо ви зустріли читера пропишіть /report [його нік]'
+- '&7[&6!&7] Якщо ви зустріли читера пропишіть /report [його нікнейм]'
 TellRawMessages:
 - null
