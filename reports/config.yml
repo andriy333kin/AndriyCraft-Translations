@@ -81,8 +81,10 @@ settings:
         Enabled: true
         Reporter-Is-Online:
         - 'mail send %reporter% Дякуємо за те що ви допомагаєте нам модерувати AndriyCraft. Ми перевірили останню скаргу і ми забанили того на кого ви поскаржилися'
+        - 'eco give %reporter% 350'
         Reporter-Is-Offline:
         - 'mail send %reporter% Дякуємо за те що ви допомагаєте нам модерувати AndriyCraft. Ми перевірили останню скаргу і ми забанили того на кого ви поскаржилися'
+        - 'eco give %reporter% 350'
     Image-Proof-URL-Whitelist:
         - 'imgur.com'
         - 'i.imgur.com'
