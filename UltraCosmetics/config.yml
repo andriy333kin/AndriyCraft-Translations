@@ -895,7 +895,7 @@ Particle-Effects:
     - '&7&oempowers the blood of its user,'
     - '&7&ogiving them godly powers..'
     # if true, the effect will be enabled.
-    Enabled: true
+    Enabled: false
     # if true, the description will be showed.
     Show-Description: false
     # if true, it'll be possible to find
@@ -972,7 +972,7 @@ Particle-Effects:
     Description:
     - '&7&oEffect created by Satan himself!'
     # if true, the effect will be enabled.
-    Enabled: true
+    Enabled: false
     # if true, the description will be showed.
     Show-Description: false
     # if true, it'll be possible to find
@@ -994,7 +994,7 @@ Particle-Effects:
     Description:
     - '&7&oBecome Superman!'
     # if true, the effect will be enabled.
-    Enabled: true
+    Enabled: false
     # if true, the description will be showed.
     Show-Description: false
     # if true, it'll be possible to find
@@ -1064,7 +1064,7 @@ Particle-Effects:
     Description:
     - '&7&oOMG wow I''m in love!'
     # if true, the effect will be enabled.
-    Enabled: true
+    Enabled: false
     # if true, the description will be showed.
     Show-Description: false
     # if true, it'll be possible to find
