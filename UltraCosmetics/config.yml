@@ -1,6 +1,4 @@
-# If set to true, will check for updates
 Check-For-Updates: true
-# List of the enabled categories.
 Categories-Enabled:
   Gadgets: true
   Particle-Effects: true
@@ -10,15 +8,11 @@ Categories-Enabled:
   Hats: false
   Suits: true
   Emotes: true
-# Other settings for categories:
-# - The Item in Main Menu.
-# - Do you want a BackToMainMenu Arrow in it?
 Categories:
   Gadgets:
     Main-Menu-Item: '409:0'
     Go-Back-Arrow: true
-    # You wanna show the cooldown of current gadget in actionbar?
-    Cooldown-In-ActionBar: true
+    Cooldown-In-ActionBar: false
   Particle-Effects:
     Main-Menu-Item: '399:0'
     Go-Back-Arrow: true
@@ -63,36 +57,7 @@ Categories:
   Back-To-Main-Menu-Custom-Command:
     Enabled: false
     Command: cc open custommenu.yml {player}
-# The economy that should be used. Supports 'Vault' or 'PlayerPoints'
 Economy: Vault
-# Treasure Chests Settings.
-# /uc reload will not be enough to toggle them!
-# 
-# NOTE: Money will be given
-#       to player even if disabled in case
-#       there is nothing to give!
-# 
-# 
-# About Treasure Chests designs:
-# For a list of effect: http://pastebin.com/CVKkufck
-# For the chest-types: NORMAL or ENDER
-# Material syntax: 'id:data'
-# You CAN make more designs just copy one, paste it and modify.
-# Not twice same name!
-# 
-# Some infos:
-# center-block: The block on the center.
-# around-center: Blocks around the center
-# third-BLOCKS: BLOCKS "around around" the center.
-# below-chests: Block below the chests.
-# barriers: the barrier.
-# chest-type: The chest type (NORMAL or ENDER)
-# effect: The effect (complete list: http://pastebin.com/CVKkufck)
-# 
-# For permission command:
-# Change it to correspond to your Permissions plugin!
-# Default one is Pex's.
-# 
 TreasureChests:
   Enabled: false
   Key-Price: 1000
@@ -930,7 +895,7 @@ Particle-Effects:
     - '&7&oempowers the blood of its user,'
     - '&7&ogiving them godly powers..'
     # if true, the effect will be enabled.
-    Enabled: true
+    Enabled: false
     # if true, the description will be showed.
     Show-Description: false
     # if true, it'll be possible to find
@@ -941,7 +906,7 @@ Particle-Effects:
     Description:
     - '&7&oI am The Almighty Frostlord!'
     # if true, the effect will be enabled.
-    Enabled: true
+    Enabled: false
     # if true, the description will be showed.
     Show-Description: false
     # if true, it'll be possible to find
@@ -1007,7 +972,7 @@ Particle-Effects:
     Description:
     - '&7&oEffect created by Satan himself!'
     # if true, the effect will be enabled.
-    Enabled: true
+    Enabled: false
     # if true, the description will be showed.
     Show-Description: false
     # if true, it'll be possible to find
@@ -1016,20 +981,16 @@ Particle-Effects:
   AngelWings:
     # Description of this cosmetic.
     Description:
-    - '&7&oBecome an angel!'
-    # if true, the effect will be enabled.
-    Enabled: true
-    # if true, the description will be showed.
+    - 'null'
+    Enabled: false
     Show-Description: false
-    # if true, it'll be possible to find
-    # it in treasure chests
     Can-Be-Found-In-Treasure-Chests: true
   SuperHero:
     # Description of this cosmetic.
     Description:
     - '&7&oBecome Superman!'
     # if true, the effect will be enabled.
-    Enabled: true
+    Enabled: false
     # if true, the description will be showed.
     Show-Description: false
     # if true, it'll be possible to find
@@ -1063,7 +1024,7 @@ Particle-Effects:
     Description:
     - '&7&oHEY!!'
     # if true, the effect will be enabled.
-    Enabled: true
+    Enabled: false
     # if true, the description will be showed.
     Show-Description: false
     # if true, it'll be possible to find
@@ -1099,7 +1060,7 @@ Particle-Effects:
     Description:
     - '&7&oOMG wow I''m in love!'
     # if true, the effect will be enabled.
-    Enabled: true
+    Enabled: false
     # if true, the description will be showed.
     Show-Description: false
     # if true, it'll be possible to find
@@ -2301,7 +2262,7 @@ Suits:
     Description:
     - '&7&oSuch amazing colors!'
     # if true, the suit will be enabled.
-    Enabled: true
+    Enabled: false
     # if true, the description of this suit will be showed.
     Show-Description: false
     # if true, it'll be possible to find
@@ -2324,7 +2285,7 @@ Suits:
     - '&7&oShow your Mining skills'
     - '&7&owith this amazing outfit!'
     # if true, the suit will be enabled.
-    Enabled: true
+    Enabled: false
     # if true, the description of this suit will be showed.
     Show-Description: false
     # if true, it'll be possible to find
