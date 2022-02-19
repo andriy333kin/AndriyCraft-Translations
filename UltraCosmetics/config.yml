@@ -981,13 +981,9 @@ Particle-Effects:
   AngelWings:
     # Description of this cosmetic.
     Description:
-    - '&7&oBecome an angel!'
-    # if true, the effect will be enabled.
-    Enabled: true
-    # if true, the description will be showed.
+    - 'null'
+    Enabled: false
     Show-Description: false
-    # if true, it'll be possible to find
-    # it in treasure chests
     Can-Be-Found-In-Treasure-Chests: true
   SuperHero:
     # Description of this cosmetic.
