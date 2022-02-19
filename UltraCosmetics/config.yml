@@ -2262,7 +2262,7 @@ Suits:
     Description:
     - '&7&oSuch amazing colors!'
     # if true, the suit will be enabled.
-    Enabled: true
+    Enabled: false
     # if true, the description of this suit will be showed.
     Show-Description: false
     # if true, it'll be possible to find
@@ -2285,7 +2285,7 @@ Suits:
     - '&7&oShow your Mining skills'
     - '&7&owith this amazing outfit!'
     # if true, the suit will be enabled.
-    Enabled: true
+    Enabled: false
     # if true, the description of this suit will be showed.
     Show-Description: false
     # if true, it'll be possible to find
