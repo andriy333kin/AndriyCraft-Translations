@@ -1,6 +1,4 @@
-# If set to true, will check for updates
 Check-For-Updates: true
-# List of the enabled categories.
 Categories-Enabled:
   Gadgets: true
   Particle-Effects: true
@@ -10,15 +8,11 @@ Categories-Enabled:
   Hats: false
   Suits: true
   Emotes: true
-# Other settings for categories:
-# - The Item in Main Menu.
-# - Do you want a BackToMainMenu Arrow in it?
 Categories:
   Gadgets:
     Main-Menu-Item: '409:0'
     Go-Back-Arrow: true
-    # You wanna show the cooldown of current gadget in actionbar?
-    Cooldown-In-ActionBar: true
+    Cooldown-In-ActionBar: false
   Particle-Effects:
     Main-Menu-Item: '399:0'
     Go-Back-Arrow: true
@@ -63,36 +57,7 @@ Categories:
   Back-To-Main-Menu-Custom-Command:
     Enabled: false
     Command: cc open custommenu.yml {player}
-# The economy that should be used. Supports 'Vault' or 'PlayerPoints'
 Economy: Vault
-# Treasure Chests Settings.
-# /uc reload will not be enough to toggle them!
-# 
-# NOTE: Money will be given
-#       to player even if disabled in case
-#       there is nothing to give!
-# 
-# 
-# About Treasure Chests designs:
-# For a list of effect: http://pastebin.com/CVKkufck
-# For the chest-types: NORMAL or ENDER
-# Material syntax: 'id:data'
-# You CAN make more designs just copy one, paste it and modify.
-# Not twice same name!
-# 
-# Some infos:
-# center-block: The block on the center.
-# around-center: Blocks around the center
-# third-BLOCKS: BLOCKS "around around" the center.
-# below-chests: Block below the chests.
-# barriers: the barrier.
-# chest-type: The chest type (NORMAL or ENDER)
-# effect: The effect (complete list: http://pastebin.com/CVKkufck)
-# 
-# For permission command:
-# Change it to correspond to your Permissions plugin!
-# Default one is Pex's.
-# 
 TreasureChests:
   Enabled: false
   Key-Price: 1000
