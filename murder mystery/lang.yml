@@ -35,9 +35,9 @@ Commands:
       Format: "&a%arena% &e%status% &6%players%/%maxplayers%"
       No-Arenas: "&cThere are no game instances!"
   Stats-Command:
-    Header: "&l-----ВАША СТАТИСТИКА-----"
-    Header-Other: "&l-----СТАТИСТИКА %player%-----"
-    Footer: "&l--------------------"
+    Header: "&6-----ВАША СТАТИСТИКА-----"
+    Header-Other: "&6-----СТАТИСТИКА %player%-----"
+    Footer: "&6--------------------"
     Kills: "&aВбивст: &e"
     Deaths: "&aСмертей: &e"
     Wins: "&aВиграшів: &e"
@@ -45,13 +45,13 @@ Commands:
     Highest-Score: "&aНайвищий бал: &e"
     Games-Played: "&aІгр зіграно: &e"
   Main-Command:
-    Header: "&6----------------{Murder Mystery commands}----------"
-    Description: "&aGame commands:\n
-    &b/mm stats: &7Shows your stats!\n
-    &b/mm leave: &7Quits current arena!\n
-    &b/mm join <arena>: &7Joins specified arena!\n
-    &b/mm top <statistic>: &7Shows top 10 players!\n
-    &b/mm randomjoin: &7Join random arena!"
+    Header: "&6------------{команди Murder Mystery}-------------"
+    Description: "&aКоманди гри:\n
+     &b/mm stats: &7Показує вашу статистику\n
+     &b/mm leave: &7Виходить із поточної арени\n
+     &b/mm join <арена>: &7Приєднується до вказаної арени\n
+     &b/mm top <статистика>: &7Показує 10 найкращих гравців\n
+     &b/mm randomjoin: &7Приєднуйтесь до випадкової арени"
     Admin-Bonus-Description: "\n&b/mma: &7Shows all the admin commands"
     Footer: "&6-------------------------------------------------"
 
@@ -105,28 +105,28 @@ Scoreboard:
 
 # Has usage only when bossbar is enabled in config.yml
 Bossbar:
-  Main-Title: "&a&lMurder Mystery &6- www.plugily.xyz"
-  Starting-In: "&f&lStarting in: &e&l%time%"
-  Waiting-For-Players: "&4&lWaiting for more players..."
-  In-Game-Info: "&e&lPlaying &f&lMURDER MYSTERY &e&lon &b&lPLUGILY.XYZ"
-  Game-Ended: "&c&lGame has ended! You were playing on &b&lPLUGILY.XYZ"
+  Main-Title: "&6Murder Mystery - play.andriycraft.page"
+  Starting-In: "&f&lПочаток через: &e&l%time%"
+  Waiting-For-Players: "&eЧекаємо на ще більше гравців..."
+  In-Game-Info: "&eMurder Mystery - play.andriycraft.page"
+  Game-Ended: "&cMurder Mystery - play.andriycraft.page"
 
 In-Game:
   #Used in most game messages.
   Plugin-Prefix: "&6Murder Mystery >> "
-  Already-Playing: "&cYou are already queued for a game! You can leave a game with /mm leave."
-  Join-No-Permission: "&cYou don't have &6%permission% &cpermission to join this arena!"
-  Full-Game-No-Permission: "&cYou don't have the permission to join full games!"
-  No-Slots-For-Premium: "&cThis game is already full of premium players! Sorry"
+  Already-Playing: "&cВи вже в черзі на гру! Ви можете залишити гру за допомогою /mm leave."
+  Join-No-Permission: "&cУ вас немає &6%дозволу% &cдозволу приєднатися до цієї арени!"
+  Full-Game-No-Permission: "&cУ вас немає дозволу приєднатися до повноцінних ігор!"
+  No-Slots-For-Premium: "&cУ цій грі вже повно преміальних гравців! Вибачте"
   You-Are-Spectator: "&cТепер ти глядач! Ти можеш літати зараз!"
   Only-Command-Ingame-Is-Leave: "&cВам потрібно спочатку вийти з гри, щоб виконати команди. Єдина команда, яка працює, це /mm leave!"
   # Join cancelled via external plugin that uses MM api.
-  Join-Cancelled-Via-API: "&cYou can't join this game!"
-  Join-As-Party-Member: "&cYou joined %ARENANAME% because the party leader joined it!"
+  Join-Cancelled-Via-API: "&cВи не можете приєднатися до цієї гри!"
+  Join-As-Party-Member: "&cВи приєдналися до %ARENANAME%, тому що до неї приєднався лідер партії!"
   Arena-Not-Configured: "&cArena is not configured yet! Contact staff!"
   Game-Chat-Format: "&7%player%: &f%message%"
   Game-Death-Format: "&7[&4☠&7] &r"
-  Cooldown-Format: "&8&l[%progress%&8&l] &6%time% seconds"
+  Cooldown-Format: "&8&l[%progress%&8&l] &6%time% секунд"
   Bow-Locator-Item-Name: "&6Локатор луків"
   Innocent-Locator-Item-Name: "&6Локатор невиних"
   Watch-Out-Title: "&cСтережись!"
@@ -163,25 +163,25 @@ In-Game:
       Innocent-Subtitle: "&eСпробуй не померти!"
     Bonus-Score: "&e+%score%  до вашого рахунока"
     Score-Actions:
-      Kill-Player: "for killing player"
-      Kill-Murderer: "for killing murderer"
-      Gold-Pickup: "for gold pickup"
-      Survive: "for surviving 30 seconds"
+      Kill-Player: "за вбивство гравця"
+      Kill-Murderer: "за вбивство вбивці"
+      Gold-Pickup: "за отримання золота"
+      Survive: "за виживання 30 секунд"
       #for innocents
-      Survive-Till-End: "for surviving till end"
+      Survive-Till-End: "за те що ви вижили до кінця гри"
       #for murderer or detective
-      Win-Game: "for winning the game"
-      Detective-Reward: "for %amount% innocents survived"
-      Innocent-Kill: "for killing innocent"
-    Picked-Up-Gold: "&ePicked up gold!"
-    Previous-Role-Left-Title: "&cPrevious %role% has left!"
-    Previous-Role-Left-Subtitle: "&cSelecting new %role%!"
-    Corpse-Last-Words: "&7%player%&e's last words:"
-    Murderer-Get-Sword: "&eThe Murderer gets their sword in &c%time% &eseconds!"
+      Win-Game: "за те що ви виграли"
+      Detective-Reward: "за те що %amount% невинних вихили"
+      Innocent-Kill: "за вбивство"
+    Picked-Up-Gold: "&eТи підібрав золото!"
+    Previous-Role-Left-Title: "&cПопередня %роль% вийшла!"
+    Previous-Role-Left-Subtitle: "&cВибір нової ролі %role%!"
+    Corpse-Last-Words: "&7Останні слова гравця %player%:"
+    Murderer-Get-Sword: "&eВбивця отримує свій меч за &c%time% &eсекунд!"
     Special-Blocks:
-      Cauldron-Drink-Potion: "&cPlease drink your current potion!"
-      Not-Enough-Gold: "&cYou need %amount% gold for this!"
-      Cauldron-Hologram: "&fMystery Potion - 1 &eGold"
+      Cauldron-Drink-Potion: "&cБудь ласка, випийте поточне зілля!"
+      Not-Enough-Gold: "&cДля цього вам потрібно %amount% золота!"
+      Cauldron-Hologram: "&fТаємниче зілля - 1 &eзолото"
       Praise-Hologram: "&eClick to give gift;&ePull lever to pray"
       Prayed-Message: "&aYou prayed to the developer! Hope he will hear that!"
       No-Money-No-Pray: "&cPay to pray!"
@@ -227,9 +227,9 @@ In-Game:
         Permission: "murdermystery.lastwords.hacker"
     Game-End-Messages:
       Titles:
-        Win: "&aТИ ПЕРЕМІГ!"
-        Lose: "&cТИ ПРОГРАВ!"
-        Died: "&cТИ ПОМЕР!"
+        Win: "&aТи переміг!"
+        Lose: "&cТи програв!"
+        Died: "&cТи помер!"
       Subtitles:
         Murderer-Stopped: "&6Вбивцю зупинили!"
         Murderer-Kill-Everyone: "&6Вбивця вбив усіх."
@@ -237,37 +237,37 @@ In-Game:
         Player-Killed-You: "&cГравець убив вас з лука!"
         Killed-Innocent: "&eВи вбили невинного гравця!"
       Winners:
-        Players: "&eГРАВЦІ"
+        Players: "&eГравці"
         Murderer: "&сВбивця"
         Nobody: "&7Ніхто"
       Summary-Message:
-        - "&a&m------------------------------------------------------------------"
-        - "&f&lMurder Mystery"
+        - "&a------------------------------------------------------------------"
+        - "&6Murder Mystery"
         - ""
-        - "&f&lВиграли: %winner%"
+        - "&6Виграли: %winner%"
         - ""
-        - "&7Дитиктив: %detective%"
-        - "&7Вбивця: %murderer% (%murderer_kills%)"
-        - "&7Герой: %hero%"
+        - "&иДитиктив: %detective%"
+        - "&сВбивця: %murderer% (%murderer_kills%)"
+        - "&5Герой: %hero%"
         - ""
-        - "&a&m------------------------------------------------------------------"
+        - "&6------------------------------------------------------------------"
     Admin-Messages:
-      Set-Starting-In-To-0: "&bAn admin set waiting time to 0. The game starts now!"
+      Set-Starting-In-To-0: "&bАдміністратор встановив час очікування на 0. Гра починається зараз!"
 
 Signs:
   Please-Type-Arena-Name: "&cPlease type arena name in second line!"
-  Arena-Doesnt-Exists: "&cArena with that name doesn't exists!"
+  Arena-Doesnt-Exists: "&cАрени з такою назвою не існує!"
   Sign-Created: "&aSign created successfully!"
   Sign-Removed: "&aSign successfully removed!"
   Game-States:
-    Inactive: "&lInactive..."
-    In-Game: "&lIn-game"
-    Starting: "&e&lStarting"
-    Full-Game: "&4&lFULL"
-    Ending: "&lEnding"
-    Restarting: "&c&lRestarting"
+    Inactive: "&lНе активна..."
+    In-Game: "&lУ грі"
+    Starting: "&e&lПочинається"
+    Full-Game: "&4&lПовна"
+    Ending: "&lЗакінчення"
+    Restarting: "&c&lПерезапуск..."
   Lines:
-    - "&4&lMurder Mystery"
+    - "&6Murder Mystery"
     - "%state%"
     - "%mapname%"
     - "&5[%playersize%/%maxplayers%]"
@@ -280,23 +280,23 @@ Arena-Selector:
       - "&4Murder Mystery &f- &e%mapname%"
       - " "
       - " "
-      - "  &fOnline: %playersize%/%maxplayers%"
-      - "  &fState: %state%"
+      - "  &fГравців: %playersize%/%maxplayers%"
+      - "  &fСтатус: %state%"
       - " "
       - " "
-      - "&eClick to join this arena"
+      - "&eНатисніть, щоб приєднатися до цієї арени"
 
 Leaderheads:
   #top command from leaderheads ex. mmtopkills
   Top-Command-Name: "mmtop%stat%"
-  Top-Command-Inv-Title: "&bTop users"
+  Top-Command-Inv-Title: "&bКращі гравці"
   Leaderboard-Value:
-    Kills: "&e{amount} kills"
-    Deaths: "&e{amount} deaths"
-    Games-Played: "&e{amount} games played"
-    Highest-Score: "&e{amount} highest score"
-    Wins: "&e{amount} wins"
-    Loses: "&e{amount} loses"
+    Kills: "&e{amount} вбивств"
+    Deaths: "&e{amount} смертей"
+    Games-Played: "&e{amount} ігор зіграно"
+    Highest-Score: "&e{amount} найвищий бал"
+    Wins: "&e{amount} перемог"
+    Loses: "&e{amount} програші"
 
 Validator:
   Invalid-Arena-Configuration: "[Murder Mystery] Arena %arena% has invalid configuration! Missing node: %error%"
@@ -305,11 +305,11 @@ Validator:
 
 Placeholders:
   Game-States:
-    Waiting: "&lWaiting for players..."
-    Starting: "&e&lStarting"
-    In-Game: "&lIn-game"
-    Ending: "&lEnding"
-    Restarting: "&c&lRestarting"
+    Waiting: "&lЧекаємо на гравців..."
+    Starting: "&e&lПочаток"
+    In-Game: "&lУ грі"
+    Ending: "&lЗакінчення"
+    Restarting: "&c&lПерезапуск"
 
 # Don't edit it. But who's stopping you? It's your server!
 # Really, don't edit ;p
