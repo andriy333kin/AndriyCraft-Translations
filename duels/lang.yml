@@ -1,0 +1,486 @@
+# DO NOT EDIT THIS VALUE!
+config-version: 11
+
+# Define placeholders usable in any message below.
+# Example: Adding 'PREFIX: "[Cool]"' below and then putting '{PREFIX}' in a message will display '[Cool]' when the message is sent in game.
+STRINGS:
+  PREFIX: '&9[Дуелі]'
+  LINE: '&9&m------------------------------------&r'
+  HALF_LINE: '&9&m----------------&r'
+  FAIL_PREFIX: '&cНе вдалося розпочати матч:'
+
+
+GENERAL:
+  true: '&aтак'
+  false: '&cні'
+  enabled: '&aувімкнено'
+  disabled: '&cвідключено'
+  not-selected: 'Не вибрано'
+  random: 'Випадковий'
+  none: 'none'
+  kit-selector: 'Kit Selector'
+  arena-selector: 'Arena Selector'
+  item-betting: 'Item Betting'
+  betting: 'Betting'
+
+
+ERROR:
+  no-permission: '{PREFIX} &cВам не вистачає дозволу: ''%permission%'''
+  data:
+    load-failure: '{PREFIX} &cНе вдалося завантажити вашу статистику дуелі. Будь ласка, спробуйте знову приєднатися.'
+    not-loaded: '{PREFIX} &cНаразі система статистики перевантажена'
+    not-found: '{PREFIX} &c%name% не має доступної статистики дуелі.'
+  top:
+    no-data-available: '{PREFIX} &cДоступних даних нема.'
+  player:
+    not-found: '{PREFIX} &c%name% не в мережі.'
+    no-longer-online: '{PREFIX} &cцей гравець більше не в мережі.'
+  arena:
+    not-found: '{PREFIX} &cАрени з такою назвою не існує.'
+    already-exists: '{PREFIX} &cAn arena named ''%name%'' already exists.'
+    delete-failure: '{PREFIX} &cCannot delete an arena that is currently in use. Please disable it first using the command ''/duels toggle %name%'''
+    invalid-position: '{PREFIX} &cPosition must be 1 or 2.'
+    no-position-set: '{PREFIX} &cArena ''%name%'' have no positions set.'
+  kit:
+    not-found: '{PREFIX} &cНе існує комплекту з назвою ''%name%''.'
+    already-exists: '{PREFIX} &cA kit named ''%name%'' already exists.'
+    empty-hand: '{PREFIX} &cЩоб скористатися цією командою, ви повинні тримати предмет.'
+  duel:
+    is-self: '{PREFIX} &cНе можна викликати сабого себе на дуєль.'
+    inventory-not-empty: '{PREFIX} &cЩоб використовувати цю команду, у вас повинен бути очищений інвентар.'
+    in-creative-mode: '{PREFIX} &cСпочатку вимкніть творчий режим гри.'
+    in-blacklisted-world: '{PREFIX} &cВи не можете виклика когосб на дуєль в цьому світі'
+    is-tagged: '{PREFIX} &cВи не можете вести дуель під час бою.'
+    not-in-duelzone: ''
+    requests-disabled: '{PREFIX} &c%name% наразі не приймає запити на дуель.'
+    already-has-request: '{PREFIX} &cВи вже запросили %name% на дуєль.'
+    no-request: '{PREFIX} &cУ вас немає запиту від %name%.'
+    already-in-match:
+      sender: '{PREFIX} &cНе можна цього робити під час дуелі.'
+      target: '{PREFIX} &c%name% вже в дуелі.'
+    already-in-queue: '{PREFIX} &cВи не можете зробити це коли, перебуваєте в черзі.'
+    prevent-teleportation: '{PREFIX} &cНе можна телепортуватися до гравця в дуелі.'
+    mode-unselected: '{PREFIX} &cВи повинні або вибрати набір, або включити режим власного інвентарю.'
+    mode-fixed: '{PREFIX} &cYou are not allowed to disable own inventory mode.'
+  spectate:
+    already-spectating:
+      sender: '{PREFIX} &cВи не можете зробити цього в режимі глядача.'
+      target: '{PREFIX} &c%name% знаходиться в режимі глядача.'
+    not-in-match: '{PREFIX} &c%name% не в дуелі.'
+  setting:
+    disabled-option: '{PREFIX} &c%option% наразі вимкнено.'
+    arena-not-applicable: '{PREFIX} &cВи не можете використовувати цей комплект на цій арені.'
+  inventory-view:
+    not-a-uuid: '{PREFIX} &c%input% не є дійсним UUID.'
+    not-found: '{PREFIX} &cІнвентаря з UUID не існує ''%uuid%''.'
+  queue:
+    not-found: '{PREFIX} &cЗ комплектом %kit% і ставкою $%bet_amount% немає черги.'
+    already-exists: '{PREFIX} &cЧерга з комплектом ''%kit%'' та ставкою $%bet_amount% вже існує.'
+    already-in: '{PREFIX} &cВи вже в черзі!'
+    not-in-queue: '{PREFIX} &cВи не в черзі.'
+    not-enough-money: '{PREFIX} &cВам потрібно $%bet_amount%, щоб приєднатися до цієї черги.'
+    no-queues-available: '{PREFIX} &cНемає доступних черг.'
+  sign:
+    not-a-sign: '{PREFIX} &cБлок, на який ви дивитесь, не є табличкою'
+    not-found: '{PREFIX} &cЦя табличка не є табличкою черги!'
+    already-exists: '{PREFIX} &cЦя табличка уже знак черги! Щоб видалити, скористайтеся командою ''/duels delsign'''
+    cancel-break: '{PREFIX} &cВи не можете зламати знак табличка вручну! Будь ласка, використовуйте команду ''/duels delsign'''
+  sound:
+    not-found: '{PREFIX} &cЗ цією назвою не існує звуку ''%name%''.'
+  command:
+    invalid-sub-command: '{PREFIX} &c''%argument%'' не є дійсною підкомандою. Будь ласка, введіть ''/%command%'' для отримання допомоги.'
+    invalid-option: '{PREFIX} &c''%option%'' не є дійсним варіантом. Доступні параметри: %available_options%'
+    invalid-action: '{PREFIX} &c''%action%'' не є дійсним варіантом. Доступні параметри: %available_options%'
+    not-enough-money: '{PREFIX} &cYou do not have enough money to bet!'
+    lobby-save-failure: '{PREFIX} &cCould not save lobby location. Please check the console for more information.'
+    name-not-alphanumeric: '{PREFIX} &c''%name%'' не є буквено-цифровим.'
+
+
+COMMAND:
+  duel:
+    usage:
+    - '{LINE}'
+    - '&f/%command% [player] &e- &7Відправляє гравцеві запит на дуель.'
+    - '&f/%command% [accept | deny] [player] &e- &7Приймає або відхиляє запит на дуель.'
+    - '&f/%command% stats <name> &e- &7Відображає вашу статистику дуелі.'
+    - '&f/%command% toggle &e- &7Увімкнути або вимкнути отримання запитів на дуель.'
+    - '&f/%command% top [-|wins|losses|kit] &e- &7Відображає головні перемоги, поразки чи рейтинг комплекту.'
+    - '{LINE}'
+    request:
+      send:
+        sender:
+        - '{LINE}'
+        - '&aЗапит на дуель надіслано до &f%name%&7.'
+        - '&a- &7Комплект: &3%kit%'
+        - '&a- &7Арена: &e%arena%'
+        - '{LINE}'
+        receiver:
+        - '{LINE}'
+        - '&aЗапит на дуель отримано від &f%name%&7.'
+        - '&a- &7Комплект: &3%kit%'
+        - '&a- &7Arena: &e%arena%'
+        clickable-text:
+          info:
+            text: '&7Натисніть, щоб '
+            hover-text: ''
+          accept:
+            text: '&a&l[Прийняти] '
+            hover-text: '&aНатисніть, щоб прийняти цей запит.'
+          deny:
+            text: '&c&l[Відхилити]'
+            hover-text: '&cНатисніть, щоб відхилити цей запит.'
+          extra:
+            text: '{LINE}'
+            hover-text: ''
+      accept:
+        sender: '{PREFIX} &f%name% &7прийняв ваш запит на дуель.'
+        receiver: '{PREFIX} &7Ви прийняли запит на дуель від &f%name%&7.'
+      deny:
+        sender: '{PREFIX} &cВаш запит на дуель до %name% відхилено.'
+        receiver: '{PREFIX} &cВідхилено запит на дуель від %name%.'
+    stats:
+      displayed:
+      - '{LINE}'
+      - '&7Статистика гравця &f%name% &e-'
+      - '&7Перемаги: &a%wins%'
+      - '&7Втрати: &c%losses%'
+      - '&7В/С: &b%wl_ratio%'
+      - '&7Запити: &r%requests_enabled%'
+      # NOTE: Ratings will only display if either 'display-kit-ratings' or 'display-nokit-rating' is enabled in the configuration.
+      rating:
+        header: '&7Рейтинг &e-'
+        format: '&f%type%&7: &b%rating%'
+        footer: ''
+      # NOTE: Past matches will only display if 'display-past-matches' is enabled in the configuration.
+      match:
+        header: '&7Останні матчі &e-'
+        format: '&a%winner% &fпроти &c%loser%'
+        hover-text:
+        - '&7комплект: &3%kit%'
+        - '&7Тривалість: &a%duration%'
+        - '&7Час: &f%time% ago'
+        - '&7Здоров’я: &d%health%?ќ¤'
+        footer: '{LINE}'
+    toggle:
+      enabled: '{PREFIX} &aЗараз ви отримуєте запити на дуель.'
+      disabled: '{PREFIX} &cВи більше не приймаєте запити на дуель.'
+    top:
+      next-update: '{PREFIX} &7Наступне оновлення: &f%remaining%'
+      header: '{HALF_LINE} &7Топ &f10 &7%type% {HALF_LINE}'
+      display-format: '&e%rank%. &f%name% &e- &f%score% &7%identifier%'
+      footer: '{HALF_LINE} &7Топ &f10 &7%type% {HALF_LINE}'
+
+  duels:
+    usage:
+    - '{LINE}'
+    - '&f/%command% help &e- &7Displays this page.'
+    - '&f/%command% help arena &e- &7Displays a list of arena commands.'
+    - '&f/%command% help kit &e- &7Displays a list of kit commands.'
+    - '&f/%command% help queue &e- &7Displays a list of queue commands.'
+    - '&f/%command% help sign &e- &7Displays a list of sign commands.'
+    - '&f/%command% help user &e- &7Displays a list of user edit commands.'
+    - '&f/%command% help extra &e- &7Displays a list of extra commands.'
+    - '{LINE}'
+    help:
+      arena:
+      - '{HALF_LINE} &fArena Commands {HALF_LINE}'
+      - '&f/%command% create [name] &e- &7Creates an arena with given name.'
+      - '&f/%command% set [name] [1|2] &e- &7Sets the teleport position of an arena.'
+      - '&f/%command% delete [name] &e- &7Deletes an arena.'
+      - '&f/%command% info [name] &e- &7Displays a list of information about the selected arena.'
+      - '&f/%command% toggle [name] &e- &7Enables or disables an arena.'
+      - '&f/%command% tp [name] <1|2> &e- &7Teleports to an arena.'
+      - '&f/%command% list &e- &7Displays the list of all arenas.'
+      - '{HALF_LINE} &fArena Commands {HALF_LINE}'
+      kit:
+      - '{HALF_LINE} &fKit Commands {HALF_LINE}'
+      - '&f/%command% savekit <-o> [name] &e- &7Saves a kit with given name.'
+      - '&f/%command% loadkit [name] &e- &7Loads the selected kit to your inventory.'
+      - '&f/%command% deletekit [name] &e- &7Deletes a kit.'
+      - '&f/%command% setitem [name] &e- &7Sets the displayed item for selected kit.'
+      - '&f/%command% options [kit] &e- &7Opens the options gui for selected kit.'
+      - '&f/%command% bind [kit] &e- &7Opens the arena bind gui for selected kit.'
+      - '&f/%command% list &e- &7Displays the list of all kits.'
+      - '{HALF_LINE} &fKit Commands {HALF_LINE}'
+      queue:
+      - '{HALF_LINE} &fQueue Sign Commands {HALF_LINE}'
+      - '&f/%command% createqueue [bet] [-|kit] &e- &7Creates a queue with bet and kit.'
+      - '&f/%command% deletequeue &e- &7Deletes the queue with bet and kit.'
+      - '&f/%command% list &e- &7Displays a list of available queues.'
+      - '{HALF_LINE} &fQueue Sign Commands {HALF_LINE}'
+      sign:
+      - '{HALF_LINE} &fQueue Sign Commands {HALF_LINE}'
+      - '&f/%command% addsign [bet] [-|kit] &e- &7Creates a queue sign with bet and kit.'
+      - '&f/%command% delsign &e- &7Deletes the queue sign you are looking at.'
+      - '&f/%command% list &e- &7Displays a list of queue signs.'
+      - '{HALF_LINE} &fQueue Sign Commands {HALF_LINE}'
+      user:
+      - '{HALF_LINE} &fUser Edit Commands {HALF_LINE}'
+      - '&f/%command% setrating [name] [-|kit] [amount] &e- &7Sets player''s rating for kit.'
+      - '&f/%command% edit [name] [add|remove|set] [wins|losses] [amount] &e- &7Edits player''s stats.'
+      - '&f/%command% resetrating [name] [-|kit|all] &e- &7Resets all or specified kit''s rating for player.'
+      - '&f/%command% reset [name] &e- &7Resets player''s stats.'
+      - '{HALF_LINE} &fUser Edit Commands {HALF_LINE}'
+      extra:
+      - '{HALF_LINE} &fExtra Commands {HALF_LINE}'
+      - '&f/%command% setlobby &e- &7Sets duel lobby location.'
+      - '&f/%command% lobby &e- &7Teleports to duel lobby.'
+      - '&f/%command% playsound [name] &e- &7Plays the selected sound if defined in config.'
+      - '&f/%command% reload <module> &e- &7Reloads the plugin or the specified module.'
+      - '{HALF_LINE} &fExtra Commands {HALF_LINE}'
+    create: '{PREFIX} &7Арена &e%name%&7 успішно створена. Щоб встановити точки появи для цієї арени, скористайтеся командою &f/duels set %name% 1'
+    delete: '{PREFIX} &7Arena &e%name% &7was successfully removed.'
+    set: '{PREFIX} &7Set position &f%position% &7for arena &e%name% &7at &f%location%&7.'
+    toggle: '{PREFIX} &7Arena &e%name% &7is now &r%state%&7.'
+    teleport: '{PREFIX} &7You have been teleported to arena &e%name%&7''s position &f%position%&7.'
+    save-kit: '{PREFIX} &7Kit &3%name% &7was successfully saved.'
+    delete-kit: '{PREFIX} &7Kit &3%name% &7was successfully removed.'
+    load-kit: '{PREFIX} &7Kit &3%name% &7was loaded in your inventory.'
+    set-item: '{PREFIX} &7Kit &3%name%&7''s displayed item was changed to your held item.'
+    create-queue: '{PREFIX} &7Created a queue with kit &3%kit% &7and bet &6$%bet_amount%&7.'
+    delete-queue: '{PREFIX} &7Deleted a queue with kit &3%kit% &7and bet &6$%bet_amount%&7.'
+    add-sign: '{PREFIX} &7Created queue sign at &f%location% &7with kit &3%kit% &7and bet &6$%bet_amount%&7.'
+    del-sign: '{PREFIX} &7Deleted queue sign at &f%location% &7with kit &3%kit% &7and bet &6$%bet_amount%&7.'
+    set-lobby: '{PREFIX} &7Duel lobby set at your current location.'
+    lobby: '{PREFIX} &7You have been teleported to lobby!'
+    edit: '{PREFIX} &7Following action has been executed for &f%name%&7: &f%action% %amount% %type%'
+    set-rating: '{PREFIX} &f%name%&7''s rating for kit &3%kit% &7was set to &a%rating%&7.'
+    reset-rating: '{PREFIX} &7Reset &f%name%&7''s rating for kit &3%kit%&7.'
+    reset: '{PREFIX} &7Reset &f%name%&7''s stats.'
+    info:
+    - '{HALF_LINE} &7Арена &e%name% {HALF_LINE}'
+    - '&7Використовується: &r%in_use%'
+    - '&7Вимкнено: &r%disabled%'
+    - '&7Повязані компоненти: &3%kits%'
+    - '&7Позиції: &f%positions%'
+    - '&7Гравці: &f%players%'
+    - '{HALF_LINE} &7Арена &e%name% {HALF_LINE}'
+    list:
+    - '{LINE}'
+    - '&4Темно червоний&7: Відключена арена'
+    - '&9Синій&7: Арена без встановлених позицій спавну'
+    - '&aЗелений&7: Доступна арена'
+    - '&cчервона&7: Арена використовується'
+    - '&7Арени: &r%arenas%'
+    - '&7комплекти: &f%kits%'
+    - '&7Черги: &b%queues%'
+    - '&7Спостерігає гравця в дуеліt &f%lobby%&7.'
+    - '{LINE}'
+
+  spectate:
+    usage:
+    - '{LINE}'
+    - '&f/spectate [player] &e- &7Спостерігає гравця в дуелі.'
+    - '{LINE}'
+    start-spectate: '{PREFIX} &7Зараз спостерігаємо %name% проти %opponent% на арені %arena%. Введіть /spectate, щоб припинити перегляд.'
+    stop-spectate: '{PREFIX} &7Ви більше не спостерігаєте &f%name%&7.'
+
+  sub-command-usage: '{PREFIX} &f/%command% %usage% &e- &7%description%'
+
+
+DUEL:
+  start-failure:
+    mode-unselected: '{FAIL_PREFIX} &cВи повинні або вибрати набір, або включити власний інвентар.'
+    player-is-dead: '{FAIL_PREFIX} Вас чи вашого суперника немає в живих!'
+    in-blacklisted-world: '{FAIL_PREFIX} Ви або ваш опонент перебуваєте в чорному списку!'
+    is-tagged: '{FAIL_PREFIX} Ви або ваш супротивник перебуваєте в бою!'
+    player-moved: '{FAIL_PREFIX} Ви або ваш опонент перемістилися після того, як надіслали/прийняли запит!'
+    not-in-duelzone: '{FAIL_PREFIX} Ви або ваш опонент вийшли з зони дуелі, надіславши/прийнявши запит!'
+    in-creative-mode: '{FAIL_PREFIX} Ви або ваш опонент перебуваєте в творчому режимі!'
+    no-arena-available: '{FAIL_PREFIX} Наразі арен немає. Будь-ласка спробуйте пізніше.'
+    arena-in-use: '{FAIL_PREFIX} Ця арена вже використовується. Виберіть іншу арену.'
+    arena-not-applicable: '{FAIL_PREFIX} Ви не можете використовувати комплект %kit% на цій аренa.'
+    not-enough-money: '{FAIL_PREFIX} Ви або ваш опонент не маєте $%bet_amount%.'
+  prevent:
+    item-drop: '&cВи не можете кидати предмети під час поєдинку.'
+    command: '&cВи не можете використовувати ''%command%'' під час поєдинку.'
+    teleportation: '&cВи не можете телепортуватися під час поєдинку.'
+    inventory-open: '&cВи не можете відкривати інвентар під час поєдинку.'
+  projectile-hit-message: '{PREFIX} &f%name% &7зараз знаходиться в &d%health%?ќ¤&7!'
+  on-end:
+    tie: '{PREFIX} &7Нічія!'
+    plugin-disable: '{PREFIX} &cПлагін вимикається! Завершення матчу автоматично.'
+    opponent-defeat: '{PREFIX} &f%winner% &a(%winner_rating%) (+%change%) &7переміг &c%loser% &c(%loser_rating%) (-%change%) &7на комплекті &3%kit% & з & d%health%?ќ¤'
+  inventories:
+    message: '&7Інвентарі (клацніть на назву, щоб переглянути): '
+    name-color: '&b'
+  reward:
+    money:
+      message: '{PREFIX} &7You have received &6$%money% &7for winning against &f%name%&7!'
+      title: '&eВи виграли &6$%money%&e!'
+    items:
+      message: '{PREFIX} &7You have received &f%name%&7''s items for winning!'
+
+
+QUEUE:
+  prevent:
+    command: '&cВи не можете використовувати ''%command%'', перебуваючи в черзі.'
+  add: '{PREFIX} &7Вас додали до черги на комплект %kit% і ставку %bet_amount%. Клацніть на знак ще раз або введіть /queue leave, щоб вийти з черги.'
+  remove: '{PREFIX} &7Вас вилучили з черги.'
+  found-opponent: '{PREFIX} &7Знайдено опонента: %name%! Початок матчу з комплектом %kit% та ставкою $%bet_amount%...'
+
+
+SIGN:
+  format:
+  - '&a[Click to Join]'
+  - '&3%kit%&f:&e$%bet_amount%'
+  - '&f&l%in_queue% IN QUEUE'
+  - '&f&l%in_match% IN MATCH'
+
+
+SPECTATE:
+  arena-broadcast: '{PREFIX} &f%name% &7зараз спостерігає за матчем!'
+  match-end: '{PREFIX} &7Матч, який ви спостерігали, закінчився.'
+  prevent:
+    command: '&cВи не можете використовувати ''%command%'' в режимі глядача.'
+    teleportation: '&cВи не можете телепортуватися в режимі глядача.'
+
+
+GUI:
+  settings:
+    title: 'Налаштування запиту'
+    buttons:
+      details:
+        name: '&9Деталі запиту'
+        lore:
+        - '&7Суперник: &f%opponent%'
+        - '&7Комплект: &3%kit%'
+        - '&7Власний інвентар: &r%own_inventory%'
+        - '&7Арена: &e%arena%'
+      kit-selector:
+        name: '&9Вибір комплекту'
+        lore:
+        - '&7Вибраний комплект: &3%kit%'
+        - ' '
+        - '&aНатисніть, щоб змінити комплект'
+        lore-no-permission:
+          - '&cВи не маєте дозволу щоб'
+          - '&cскористайтеся цією опцією.'
+      use-own-inventory:
+        name: '&9Використовуйте власний інвентар'
+        lore:
+          - '&7Власний інвентар: &r%own_inventory%'
+          - ' '
+          - '&aНатисніть, щоб увімкнути власний інвентар!'
+        lore-no-permission:
+          - '&cВи не маєте дозволу щоб'
+          - '&cскористайтеся цією опцією.'
+      arena-selector:
+        name: '&9Arena Selection'
+        lore:
+        - '&7Selected Arena: &e%arena%'
+        - ' '
+        - '&aClick to Change Arena!'
+        lore-no-permission:
+        - '&cВи не маєте дозволу щоб'
+        - '&cскористайтеся цією опцією.'
+      item-betting:
+        name: '&9Allow Betting Items'
+        lore:
+        - '&7Item Betting: &r%item_betting%'
+        - ' '
+        - '&aClick to Toggle Item Betting!'
+        lore-no-permission:
+        - '&cВи не маєте дозволу щоб'
+        - '&cскористайтеся цією опцією.'
+      send:
+        name: '&a&lВідправити запит'
+      cancel:
+        name: '&c&lСкасувати'
+  kit-selector:
+    title: 'Вибір комплекту'
+    buttons:
+      previous-page:
+        name: '&aПопередня сторінка'
+      next-page:
+        name: '&aНаступна сторінка'
+      empty:
+        name: '&cЦя сторінка порожня.'
+  arena-selector:
+    title: 'Вибір арени'
+    buttons:
+      arena:
+        name: '&e%name%'
+        lore-available:
+        - '&aДоступний'
+        lore-unavailable:
+        - '&cНедоступно'
+      previous-page:
+        name: '&aПопередня сторінка'
+      next-page:
+        name: '&aНаступна сторінка'
+      empty:
+        name: '&cЦя сторінка порожня.'
+  queues:
+    title: 'Доступні черги'
+    buttons:
+      queue:
+        name: '&3%kit%'
+        lore:
+        - '&7В черзі: &f%in_queue%'
+        - '&7У матчі: &f%in_match%'
+        - ' '
+        - '&a&lНатисніть, щоб поставити в чергу!'
+      previous-page:
+        name: '&aПопередня сторінка'
+      next-page:
+        name: '&aНаступна сторінка'
+      empty:
+        name: '&cЦя сторінка порожня.'
+  item-betting:
+    title: 'Переможець отримує все!'
+    buttons:
+      head:
+        name: '&e%name%'
+      state:
+        name-ready: '&a&lГотовий'
+        name-not-ready: '&7&lНе готовий'
+      details:
+        name: '&9Деталі матчу'
+        lore:
+        - '&7Комплект: &3%kit%'
+        - '&7Арена: &e%arena%'
+      cancel:
+        name: '&c&lКлікніть, щоб скасувати'
+        lore:
+        - '&7Натисніть або закрийте інвентар'
+        - '&7щоб скасувати матч.'
+  inventory-view:
+    title: '&e%name%'
+    buttons:
+      head:
+        name: '&e%name%'
+      potion-counter:
+        name: '&d%potions% Зілля здоров’я'
+      effects:
+        name: '&bЕфекти зілля'
+        lore-format: '&7%type% %amplifier% (%duration%s)'
+      hunger:
+        name: '&6%hunger%'
+      health:
+        name: '&c%health%'
+  options:
+    title: 'Комплект: %kit%'
+    buttons:
+      option:
+        name: '&b%name%'
+        lore:
+          - ' '
+          - '&7Статус: &r%state%'
+          - ' '
+          - '&r&lНатисніть, щоб відключити'
+  bind:
+    title: 'Kit: %kit%'
+    buttons:
+      arena:
+        name: '&e%arena%'
+        lore-bound:
+          - '&7Bound Kits: &3%kits%'
+          - ' '
+          - '&a&lBOUND'
+          - ' '
+          - '&r&lНатисніть, щоб вимкнути'
+        lore-not-bound:
+          - '&7Bound Kits: &3%kits%'
+          - ' '
+          - '&r&lНатисніть, щоб вимкнути'
