@@ -18,8 +18,8 @@ GENERAL:
   not-selected: 'Не вибрано'
   random: 'Випадковий'
   none: 'none'
-  kit-selector: 'Kit Selector'
-  arena-selector: 'Arena Selector'
+  kit-selector: 'Вибір набору'
+  arena-selector: 'Вибір арени'
   item-betting: 'Item Betting'
   betting: 'Betting'
 
@@ -60,7 +60,7 @@ ERROR:
       target: '{PREFIX} &c%name% вже в дуелі.'
     already-in-queue: '{PREFIX} &cВи не можете зробити це коли, перебуваєте в черзі.'
     prevent-teleportation: '{PREFIX} &cНе можна телепортуватися до гравця в дуелі.'
-    mode-unselected: '{PREFIX} &cВи повинні або вибрати набір, або включити режим власного інвентарю.'
+    mode-unselected: '{PREFIX} &cВи повинні або вибрати набір, або включити режим сумо.'
     mode-fixed: '{PREFIX} &cYou are not allowed to disable own inventory mode.'
   spectate:
     already-spectating:
@@ -104,7 +104,7 @@ COMMAND:
     - '&f/%command% [accept | deny] [player] &e- &7Приймає або відхиляє запит на дуель.'
     - '&f/%command% stats <name> &e- &7Відображає вашу статистику дуелі.'
     - '&f/%command% toggle &e- &7Увімкнути або вимкнути отримання запитів на дуель.'
-    - '&f/%command% top [wins|losses|kit] &e- &7Відображає головні перемоги, поразки чи рейтинг комплекту.'
+    - '&f/%command% top [-|wins|losses|kit] &e- &7Відображає головні перемоги, поразки чи рейтинг комплекту.'
     - '{LINE}'
     request:
       send:
@@ -118,7 +118,7 @@ COMMAND:
         - '{LINE}'
         - '&aЗапит на дуель отримано від &f%name%&7.'
         - '&a- &7Комплект: &3%kit%'
-        - '&a- &7Arena: &e%arena%'
+        - '&a- &7Арена: &e%arena%'
         clickable-text:
           info:
             text: '&7Натисніть, щоб '
@@ -159,7 +159,7 @@ COMMAND:
         - '&7комплект: &3%kit%'
         - '&7Тривалість: &a%duration%'
         - '&7Час: &f%time% ago'
-        - '&7Здоров’я: &d%health%?ќ¤'
+        - '&7Здоров’я: &d%health% хп'
         footer: '{LINE}'
     toggle:
       enabled: '{PREFIX} &aЗараз ви отримуєте запити на дуель.'
@@ -260,9 +260,9 @@ COMMAND:
     - '&4Темно червоний&7: Відключена арена'
     - '&9Синій&7: Арена без встановлених позицій спавну'
     - '&aЗелений&7: Доступна арена'
-    - '&cчервона&7: Арена використовується'
+    - '&cЧервона&7: Арена використовується'
     - '&7Арени: &r%arenas%'
-    - '&7комплекти: &f%kits%'
+    - '&7Комплекти: &f%kits%'
     - '&7Черги: &b%queues%'
     - '&7Спостерігає гравця в дуеліt &f%lobby%&7.'
     - '{LINE}'
@@ -280,7 +280,7 @@ COMMAND:
 
 DUEL:
   start-failure:
-    mode-unselected: '{FAIL_PREFIX} &cВи повинні або вибрати набір, або включити власний інвентар.'
+    mode-unselected: '{FAIL_PREFIX} &cВи повинні або вибрати набір, або включити сумо режим.'
     player-is-dead: '{FAIL_PREFIX} Вас чи вашого суперника немає в живих!'
     in-blacklisted-world: '{FAIL_PREFIX} Ви або ваш опонент перебуваєте в чорному списку!'
     is-tagged: '{FAIL_PREFIX} Ви або ваш супротивник перебуваєте в бою!'
@@ -300,7 +300,7 @@ DUEL:
   on-end:
     tie: '{PREFIX} &7Нічія!'
     plugin-disable: '{PREFIX} &cПлагін вимикається! Завершення матчу автоматично.'
-    opponent-defeat: '{PREFIX} &f%winner% &a(%winner_rating%) (+%change%) &7переміг &c%loser% &c(%loser_rating%) (-%change%) &7на комплекті &3%kit% & з & d%health%?ќ¤'
+    opponent-defeat: '{PREFIX} &f%winner% &a(%winner_rating%) (+%change%) &7переміг &c%loser% &c(%loser_rating%) (-%change%) &7на комплекті &3%kit% &f з &d%health% хп'
   inventories:
     message: '&7Інвентарі (клацніть на назву, щоб переглянути): '
     name-color: '&b'
@@ -345,7 +345,7 @@ GUI:
         lore:
         - '&7Суперник: &f%opponent%'
         - '&7Комплект: &3%kit%'
-        - '&7Власний інвентар: &r%own_inventory%'
+        - '&7Сумо режим: &r%own_inventory%'
         - '&7Арена: &e%arena%'
       kit-selector:
         name: '&9Вибір комплекту'
@@ -357,20 +357,20 @@ GUI:
           - '&cВи не маєте дозволу щоб'
           - '&cскористайтеся цією опцією.'
       use-own-inventory:
-        name: '&9Використовуйте власний інвентар'
+        name: '&9Використовувати сумо режим'
         lore:
-          - '&7Власний інвентар: &r%own_inventory%'
+          - '&aСумо режим: &r%own_inventory%'
           - ' '
-          - '&aНатисніть, щоб увімкнути власний інвентар!'
+          - '&aНатисніть, щоб увімкнути сумо режим!'
         lore-no-permission:
           - '&cВи не маєте дозволу щоб'
           - '&cскористайтеся цією опцією.'
       arena-selector:
-        name: '&9Arena Selection'
+        name: '&9Вибір арени'
         lore:
-        - '&7Selected Arena: &e%arena%'
+        - '&7Вибрана арена: &e%arena%'
         - ' '
-        - '&aClick to Change Arena!'
+        - '&aНатисніть, щоб змінити'
         lore-no-permission:
         - '&cВи не маєте дозволу щоб'
         - '&cскористайтеся цією опцією.'
